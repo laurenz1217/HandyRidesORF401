@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main"> 
+  <table>
+      {% for person in people %}
+      <tr>
+          <td>{{ person.first_name }}</td> 
+          <td>{{ person.origination }}</td>
+          <td>{{ person.destination_city }}</td> 
+          <td>{{ person.destination_state }}</td> 
+          <td>{{ person.date }}</td> 
+          <td>{{ person.time }}</td> 
+          <td>{{ person.taking_passengers }}</td>
+          <td>{{ person.seats_available }}</td> 
+      </tr>
+      {% endfor %} 
+  </table>
+</div> 
+
+<form action="{% url 'rides:index' %}" method="get">
+    <label for="id_city">City:</label>
+    <input type="text" name="city" id="id_city" value="{{ request.GET.city|default_if_none:'' }}">
+    
+    <label for="id_state">State (2-letter):</label>
+    <input type="text" name="state" id="id_state" value="{{ request.GET.state|default_if_none:'' }}">
+
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

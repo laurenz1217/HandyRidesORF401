@@ -1,0 +1,362 @@
+/* Splash Page Styles */
+.splash-container {
+    min-height: 100vh;
+    background: #254382;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: white;
+}
+
+.splash-content {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.splash-title {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.splash-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.splash-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.75rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card i.fa-car {
+    color: #FFD700;
+}
+
+.feature-card i.fa-dollar-sign {
+    color: #50C878;
+}
+
+.feature-card i.fa-leaf {
+    color: #98FB98;
+}
+
+.feature-card i.fa-users {
+    color: #87CEEB;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #D11746;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    background: #e51a4d;
+}
+
+@media (max-width: 768px) {
+    .splash-title {
+        font-size: 2.5rem;
+    }
+    
+    .splash-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .splash-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Search Page Styles */
+.search-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #254382;
+    border-radius: 2rem;
+    color: white;
+}
+
+.search-container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.search-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-form p {
+    margin-bottom: 1.5rem;
+}
+
+.search-form label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.search-form input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.search-form input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.search-form input::placeholder {
+    color: #666;
+}
+
+.search-button {
+    background: #D11746;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 2rem auto 0;
+    min-width: 150px;
+}
+
+.search-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(209, 23, 70, 0.3);
+    background: #e51a4d;
+}
+
+.results-container {
+    margin-top: 2rem;
+}
+
+.results-container h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.results-list {
+    list-style: none;
+    padding: 0;
+}
+
+.result-item {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.result-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ride-info h3 {
+    display: flex;
+    align-items: center;
+    color: #2563eb;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.ride-details, .contact-info, .additional-info {
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.ride-details p, .contact-info p, .additional-info p {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4b5563;
+}
+
+.ride-details i, .contact-info i, .additional-info i {
+    width: 20px;
+    color: #3b82f6;
+}
+
+.contact-info {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.additional-info {
+    font-style: italic;
+    color: #6b7280;
+}
+
+/* Logo styles */
+.logo-container {
+    margin-bottom: 2rem;
+}
+
+.logo-container img {
+    height: 200px;
+    width: auto;
+}
+
+/* Updated result item styles */
+.status-badge {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.available {
+    background-color: #10B981;
+    color: white;
+}
+
+.status-badge.not-available {
+    background-color: #EF4444;
+    color: white;
+}
+
+/* Welcome Message Styles */
+.welcome-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.welcome-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-box h2 {
+    color: #254382;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.welcome-box p {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+}
+
+.welcome-box button {
+    background: #D11746;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.welcome-box button:hover {
+    background: #e51a4d;
+    transform: translateY(-2px);
+}
+
+/* Update font families */
+:root {
+    --header-font: 'Baloo 2', cursive;
+    --body-font: 'Nunito', sans-serif;
+}
+
+/* Apply fonts explicitly */
+body {
+    font-family: var(--body-font);
+}
+
+h1, h2, h3, .splash-title, .feature-card h3, .search-container h1, .welcome-box h2 {
+    font-family: var(--header-font) !important;
+    font-weight: 600;
+}
+
+p, .splash-subtitle, .feature-card p, .search-form label, .search-form input, .welcome-box p {
+    font-family: var(--body-font) !important;
+}
+
+.cta-button, .search-button, .welcome-box button {
+    font-family: var(--header-font) !important;
+    font-weight: 600;
+}

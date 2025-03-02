@@ -1,0 +1,277 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- First, add this to debug -->
+<!-- DEBUG: rides.html template -->
+
+<div class="search-ride-container">
+    <div class="search-ride-content">
+        <div class="navigation-buttons">
+            <a href="{% url 'rides:index' %}" class="nav-button home">
+                <i class="fas fa-home"></i> Return Home
+            </a>
+            <a href="{% url 'rides:create' %}" class="nav-button offer">
+                <i class="fas fa-car"></i> Offer a Ride
+            </a>
+        </div>
+
+        <h1 class="page-title">Find World Cup Final Rides</h1>
+        
+        <div class="form-container">
+            <form method="GET" action="{% url 'rides:ride_search' %}">
+                <div class="form-section">
+                    <div class="form-group">
+                        <label>Search by origin city:</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-city"></i>
+                            {{ form.origin }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Search by destination city:</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-flag-checkered"></i>
+                            {{ form.destination_city }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Search by destination state:</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-map"></i>
+                            {{ form.destination_state }}
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        {% if results is not None %}
+        <div class="results-container">
+            <h2 class="results-title">Available Rides to the World Cup Final</h2>
+            {% if results %}
+                {% for ride in results %}
+                <div class="ride-card">
+                    <div class="ride-header">
+                        <h3 class="rider-name">{{ ride.name }}</h3>
+                        <span class="seats-badge">{{ ride.seats_available }} SEATS AVAILABLE</span>
+                    </div>
+                    <div class="ride-details">
+                        <p><i class="fas fa-map-marker-alt"></i> From: {{ ride.origination }}</p>
+                        <p><i class="fas fa-flag-checkered"></i> To: East Rutherford, NJ</p>
+                        <p><i class="far fa-envelope"></i> Email: {{ ride.email }}</p>
+                        <p><i class="far fa-calendar"></i> Date: {{ ride.date }}</p>
+                        <p><i class="far fa-clock"></i> Time: {{ ride.time }}</p>
+                        <p><i class="fas fa-car"></i> Vehicle: {{ ride.vehicle_type }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="no-results">
+                    <p>No rides found matching your search criteria.</p>
+                </div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<style>
+/* Add !important to all styles to override any conflicts */
+.search-ride-container {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+                url('{% static "metlife-stadium.jpg" %}') center/cover no-repeat fixed !important;
+    min-height: 100vh !important;
+    padding: 2rem !important;
+    color: white !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+}
+
+.search-ride-content {
+    width: 100% !important;
+    max-width: 700px !important;
+    margin: 2rem auto 0 !important;
+}
+
+.page-title {
+    text-align: center !important;
+    font-size: 2.5rem !important;
+    margin-bottom: 2rem !important;
+    color: #ffd700 !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+}
+
+.form-container {
+    background: rgba(40, 40, 40, 0.95) !important;
+    border-radius: 20px !important;
+    padding: 2rem !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.form-section {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+}
+
+.form-group {
+    margin-bottom: 1.5rem !important;
+}
+
+.form-group label {
+    color: #ffd700 !important;
+    font-weight: bold !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+}
+
+.input-with-icon {
+    position: relative !important;
+    width: 100% !important;
+}
+
+.input-with-icon i {
+    position: absolute !important;
+    left: 1rem !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: #4a90e2 !important;
+    z-index: 1 !important;
+}
+
+.input-with-icon input {
+    width: 100% !important;
+    padding: 0.75rem 1rem 0.75rem 2.5rem !important;
+    border: none !important;
+    border-radius: 10px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1rem !important;
+    box-sizing: border-box !important;
+}
+
+.submit-button {
+    width: 100% !important;
+    padding: 1rem !important;
+    background: #dc3545 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 10px !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    margin-top: 1rem !important;
+}
+
+.navigation-buttons {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.nav-button {
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 10px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    transition: transform 0.2s ease !important;
+}
+
+.nav-button:hover {
+    transform: translateY(-2px) !important;
+}
+
+.nav-button.home {
+    background: #4a90e2 !important;
+    color: white !important;
+}
+
+.nav-button.offer {
+    background: #28a745 !important;
+    color: white !important;
+}
+
+/* Add these new styles for the results section */
+.results-container {
+    margin-top: 2rem !important;
+    background: rgba(40, 40, 40, 0.95) !important;
+    border-radius: 20px !important;
+    padding: 2rem !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important;
+}
+
+.results-title {
+    color: #ffd700 !important;
+    text-align: center !important;
+    margin-bottom: 1.5rem !important;
+    font-size: 1.8rem !important;
+}
+
+.ride-card {
+    background: rgba(40, 40, 40, 0.95) !important;
+    border-radius: 10px !important;
+    padding: 1.5rem !important;
+    margin-bottom: 1rem !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+}
+
+.ride-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 1rem !important;
+}
+
+.rider-name {
+    color: #ffd700 !important;
+    margin: 0 !important;
+    font-size: 1.3rem !important;
+}
+
+.seats-badge {
+    background: #28a745 !important;
+    color: white !important;
+    padding: 0.3rem 0.8rem !important;
+    border-radius: 20px !important;
+    font-size: 0.9rem !important;
+    font-weight: bold !important;
+    display: inline-block !important;
+}
+
+.ride-details {
+    color: white !important;
+}
+
+.ride-details p {
+    margin: 0.5rem 0 !important;
+    color: white !important;
+}
+
+.ride-details i {
+    width: 20px !important;
+    margin-right: 10px !important;
+    color: #ffd700 !important;
+}
+
+.no-results {
+    text-align: center !important;
+    color: #ffffff !important;
+    padding: 2rem !important;
+}
+</style>
+{% endblock %} 

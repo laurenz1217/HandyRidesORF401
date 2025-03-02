@@ -1,0 +1,1058 @@
+[
+    {
+        "model": "rides.person",
+        "pk": 1,
+        "fields": {
+            "name": "Zach Johnson",
+            "origination": "Las Vegas, NV",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "20:00",
+            "taking_passengers": true,
+            "seats_available": 3,
+            "email": "zach.johnson@outlook.com",
+            "vehicle_type": "Luxury"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 2,
+        "fields": {
+            "name": "Alain Wilson",
+            "origination": "Phoenix, AZ",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "20:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "alain.wilson@outlook.com",
+            "vehicle_type": "Hybrid"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 3,
+        "fields": {
+            "origination": "San Francisco, CA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "14:30",
+            "taking_passengers": true,
+            "seats_available": 3,
+            "email": "jake.martinez@aol.com",
+            "vehicle_type": "Hybrid",
+            "name": "Jake Martinez"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 4,
+        "fields": {
+            "origination": "Minneapolis, MN",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "19:30",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "rose.garcia@gmail.com",
+            "vehicle_type": "Convertible",
+            "name": "Rose Garcia"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 5,
+        "fields": {
+            "origination": "San Francisco, CA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "18:45",
+            "taking_passengers": true,
+            "seats_available": 6,
+            "email": "peter.johnson@yahoo.com",
+            "vehicle_type": "SUV",
+            "name": "Peter Johnson"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 6,
+        "fields": {
+            "origination": "Seattle, WA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "19:30",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "will.williams@icloud.com",
+            "vehicle_type": "Hybrid",
+            "name": "Will Williams"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 7,
+        "fields": {
+            "origination": "Minneapolis, MN",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "18:45",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "kris.miller@outlook.com",
+            "vehicle_type": "Electric",
+            "name": "Kris Miller"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 8,
+        "fields": {
+            "origination": "Phoenix, AZ",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "16:00",
+            "taking_passengers": true,
+            "seats_available": 2,
+            "email": "jill.garcia@gmail.com",
+            "vehicle_type": "Hybrid",
+            "name": "Jill Garcia"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 9,
+        "fields": {
+            "origination": "Nashville, TN",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "18:45",
+            "taking_passengers": true,
+            "seats_available": 3,
+            "email": "lindsay.miller@outlook.com",
+            "vehicle_type": "Sedan",
+            "name": "Lindsay Miller"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 10,
+        "fields": {
+            "origination": "Portland, OR",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "12:00",
+            "taking_passengers": true,
+            "seats_available": 4,
+            "email": "mike.wilson@aol.com",
+            "vehicle_type": "Sedan",
+            "name": "Mike Wilson"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 11,
+        "fields": {
+            "origination": "Denver, CO",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "16:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "tom.martinez@icloud.com",
+            "vehicle_type": "Convertible",
+            "name": "Tom Martinez"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 12,
+        "fields": {
+            "origination": "Phoenix, AZ",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "20:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "adam.martinez@aol.com",
+            "vehicle_type": "Luxury",
+            "name": "Adam Martinez"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 13,
+        "fields": {
+            "origination": "Philadelphia, PA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "18:45",
+            "taking_passengers": true,
+            "seats_available": 1,
+            "email": "jason.miller@gmail.com",
+            "vehicle_type": "Hybrid",
+            "name": "Jason Miller"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 14,
+        "fields": {
+            "origination": "Detroit, MI",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "08:00",
+            "taking_passengers": true,
+            "seats_available": 5,
+            "email": "wet.jones@outlook.com",
+            "vehicle_type": "Convertible",
+            "name": "Wet Jones"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 15,
+        "fields": {
+            "origination": "Seattle, WA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "16:00",
+            "taking_passengers": true,
+            "seats_available": 2,
+            "email": "matt.garcia@yahoo.com",
+            "vehicle_type": "Sedan",
+            "name": "Matt Garcia"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 16,
+        "fields": {
+            "origination": "Detroit, MI",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "13:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "caleb.miller@gmail.com",
+            "vehicle_type": "Hybrid",
+            "name": "Caleb Miller"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 17,
+        "fields": {
+            "origination": "Washington, DC",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "12:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "don.garcia@icloud.com",
+            "vehicle_type": "Luxury",
+            "name": "Don Garcia"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 18,
+        "fields": {
+            "origination": "Boston, MA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "08:00",
+            "taking_passengers": true,
+            "seats_available": 3,
+            "email": "kile.williams@gmail.com",
+            "vehicle_type": "Truck",
+            "name": "Kile Williams"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 19,
+        "fields": {
+            "origination": "Nashville, TN",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "14:30",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "hill.jones@gmail.com",
+            "vehicle_type": "Truck",
+            "name": "Hill Jones"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 20,
+        "fields": {
+            "origination": "Las Vegas, NV",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "19:30",
+            "taking_passengers": true,
+            "seats_available": 2,
+            "email": "newton.wilson@icloud.com",
+            "vehicle_type": "Electric",
+            "name": "Newton Wilson"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 21,
+        "fields": {
+            "origination": "Detroit, MI",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "19:30",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "gibs.garcia@gmail.com",
+            "vehicle_type": "Truck",
+            "name": "Gibs Garcia"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 22,
+        "fields": {
+            "origination": "Las Vegas, NV",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "16:00",
+            "taking_passengers": true,
+            "seats_available": 2,
+            "email": "jackson.miller@gmail.com",
+            "vehicle_type": "Sedan",
+            "name": "Jackson Miller"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 23,
+        "fields": {
+            "origination": "Detroit, MI",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "20:00",
+            "taking_passengers": true,
+            "seats_available": 4,
+            "email": "gordon.martinez@icloud.com",
+            "vehicle_type": "Convertible",
+            "name": "Gordon Martinez"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 24,
+        "fields": {
+            "origination": "Miami, FL",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "14:30",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "luke.johnson@yahoo.com",
+            "vehicle_type": "Electric",
+            "name": "Luke Johnson"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 25,
+        "fields": {
+            "origination": "Philadelphia, PA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "16:00",
+            "taking_passengers": true,
+            "seats_available": 3,
+            "email": "katie.smith@gmail.com",
+            "vehicle_type": "Truck",
+            "name": "Katie Smith"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 26,
+        "fields": {
+            "origination": "Miami, FL",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "18:45",
+            "taking_passengers": true,
+            "seats_available": 3,
+            "email": "john.martinez@aol.com",
+            "vehicle_type": "Truck",
+            "name": "John Martinez"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 27,
+        "fields": {
+            "origination": "Seattle, WA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "12:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "ashley.garcia@aol.com",
+            "vehicle_type": "SUV",
+            "name": "Ashley Garcia"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 28,
+        "fields": {
+            "origination": "Houston, TX",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "20:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "robert.johnson@icloud.com",
+            "vehicle_type": "Sedan",
+            "name": "Robert Johnson"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 29,
+        "fields": {
+            "origination": "Chicago, IL",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "12:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "john.williams@yahoo.com",
+            "vehicle_type": "Convertible",
+            "name": "John Williams"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 30,
+        "fields": {
+            "origination": "Philadelphia, PA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "13:00",
+            "taking_passengers": true,
+            "seats_available": 2,
+            "email": "john.miller@aol.com",
+            "vehicle_type": "Luxury",
+            "name": "John Miller"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 31,
+        "fields": {
+            "origination": "Detroit, MI",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "20:00",
+            "taking_passengers": true,
+            "seats_available": 1,
+            "email": "michael.garcia@outlook.com",
+            "vehicle_type": "Luxury",
+            "name": "Michael Garcia"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 32,
+        "fields": {
+            "origination": "Minneapolis, MN",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "16:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "megan.williams@gmail.com",
+            "vehicle_type": "Luxury",
+            "name": "Megan Williams"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 33,
+        "fields": {
+            "origination": "Las Vegas, NV",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "14:30",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "michael.miller@aol.com",
+            "vehicle_type": "Sedan",
+            "name": "Michael Miller"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 34,
+        "fields": {
+            "origination": "Charlotte, NC",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "13:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "ryan.wilson@yahoo.com",
+            "vehicle_type": "Luxury",
+            "name": "Ryan Wilson"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 35,
+        "fields": {
+            "origination": "Portland, OR",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "14:30",
+            "taking_passengers": true,
+            "seats_available": 6,
+            "email": "hannah.williams@icloud.com",
+            "vehicle_type": "SUV",
+            "name": "Hannah Williams"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 36,
+        "fields": {
+            "origination": "Los Angeles, CA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "12:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "nicole.jones@gmail.com",
+            "vehicle_type": "Hybrid",
+            "name": "Nicole Jones"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 37,
+        "fields": {
+            "origination": "Nashville, TN",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "18:45",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "sarah.davis@yahoo.com",
+            "vehicle_type": "Luxury",
+            "name": "Sarah Davis"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 38,
+        "fields": {
+            "origination": "San Francisco, CA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "13:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "samantha.miller@aol.com",
+            "vehicle_type": "Hybrid",
+            "name": "Samantha Miller"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 39,
+        "fields": {
+            "origination": "Atlanta, GA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "18:45",
+            "taking_passengers": true,
+            "seats_available": 3,
+            "email": "nicole.johnson@yahoo.com",
+            "vehicle_type": "Convertible",
+            "name": "Nicole Johnson"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 40,
+        "fields": {
+            "origination": "Houston, TX",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "13:00",
+            "taking_passengers": true,
+            "seats_available": 3,
+            "email": "ashley.jones@outlook.com",
+            "vehicle_type": "Hybrid",
+            "name": "Ashley Jones"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 41,
+        "fields": {
+            "origination": "Phoenix, AZ",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "19:30",
+            "taking_passengers": true,
+            "seats_available": 4,
+            "email": "james.jones@gmail.com",
+            "vehicle_type": "Truck",
+            "name": "James Jones"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 42,
+        "fields": {
+            "origination": "Austin, TX",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "20:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "lauren.garcia@yahoo.com",
+            "vehicle_type": "SUV",
+            "name": "Lauren Garcia"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 43,
+        "fields": {
+            "origination": "Los Angeles, CA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "08:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "james.wilson@icloud.com",
+            "vehicle_type": "Hybrid",
+            "name": "James Wilson"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 44,
+        "fields": {
+            "origination": "Las Vegas, NV",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "12:00",
+            "taking_passengers": true,
+            "seats_available": 4,
+            "email": "lauren.miller@outlook.com",
+            "vehicle_type": "Hybrid",
+            "name": "Lauren Miller"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 45,
+        "fields": {
+            "origination": "Portland, OR",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "20:00",
+            "taking_passengers": true,
+            "seats_available": 2,
+            "email": "sarah.miller@icloud.com",
+            "vehicle_type": "Convertible",
+            "name": "Sarah Miller"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 46,
+        "fields": {
+            "origination": "Detroit, MI",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "19:30",
+            "taking_passengers": true,
+            "seats_available": 3,
+            "email": "david.davis@yahoo.com",
+            "vehicle_type": "Convertible",
+            "name": "David Davis"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 47,
+        "fields": {
+            "origination": "Philadelphia, PA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "16:00",
+            "taking_passengers": true,
+            "seats_available": 4,
+            "email": "michael.garcia@icloud.com",
+            "vehicle_type": "Electric",
+            "name": "Michael Garcia"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 48,
+        "fields": {
+            "origination": "Charlotte, NC",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "20:00",
+            "taking_passengers": true,
+            "seats_available": 2,
+            "email": "kayla.garcia@gmail.com",
+            "vehicle_type": "Hybrid",
+            "name": "Kayla Garcia"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 49,
+        "fields": {
+            "origination": "Chicago, IL",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "12:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "jessica.brown@outlook.com",
+            "vehicle_type": "Luxury",
+            "name": "Jessica Brown"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 50,
+        "fields": {
+            "origination": "Denver, CO",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "08:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "samantha.miller@aol.com",
+            "vehicle_type": "Hybrid",
+            "name": "Samantha Miller"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 51,
+        "fields": {
+            "origination": "Austin, TX",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "16:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "daniel.miller@icloud.com",
+            "vehicle_type": "Truck",
+            "name": "Daniel Miller"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 52,
+        "fields": {
+            "origination": "Austin, TX",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "19:30",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "david.miller@yahoo.com",
+            "vehicle_type": "Luxury",
+            "name": "David Miller"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 53,
+        "fields": {
+            "origination": "Boston, MA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "19:30",
+            "taking_passengers": true,
+            "seats_available": 3,
+            "email": "lauren.brown@gmail.com",
+            "vehicle_type": "Electric",
+            "name": "Lauren Brown"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 54,
+        "fields": {
+            "origination": "Boston, MA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "20:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "nicole.smith@yahoo.com",
+            "vehicle_type": "Electric",
+            "name": "Nicole Smith"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 55,
+        "fields": {
+            "origination": "Philadelphia, PA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "19:30",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "ashley.jones@yahoo.com",
+            "vehicle_type": "Truck",
+            "name": "Ashley Jones"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 56,
+        "fields": {
+            "origination": "Miami, FL",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "14:30",
+            "taking_passengers": true,
+            "seats_available": 1,
+            "email": "elizabeth.jones@yahoo.com",
+            "vehicle_type": "Sedan",
+            "name": "Elizabeth Jones"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 57,
+        "fields": {
+            "origination": "Charlotte, NC",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "14:30",
+            "taking_passengers": true,
+            "seats_available": 1,
+            "email": "kayla.davis@outlook.com",
+            "vehicle_type": "Luxury",
+            "name": "Kayla Davis"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 58,
+        "fields": {
+            "origination": "Los Angeles, CA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "16:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "megan.brown@outlook.com",
+            "vehicle_type": "Sedan",
+            "name": "Megan Brown"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 59,
+        "fields": {
+            "origination": "Chicago, IL",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "12:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "elizabeth.martinez@yahoo.com",
+            "vehicle_type": "Truck",
+            "name": "Elizabeth Martinez"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 60,
+        "fields": {
+            "origination": "Washington, DC",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "08:00",
+            "taking_passengers": true,
+            "seats_available": 3,
+            "email": "john.martinez@gmail.com",
+            "vehicle_type": "Truck",
+            "name": "John Martinez"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 61,
+        "fields": {
+            "origination": "Detroit, MI",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "19:30",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "sarah.johnson@aol.com",
+            "vehicle_type": "Sedan",
+            "name": "Sarah Johnson"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 62,
+        "fields": {
+            "origination": "Austin, TX",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "12:00",
+            "taking_passengers": false,
+            "seats_available": 0,
+            "email": "brandon.davis@aol.com",
+            "vehicle_type": "Luxury",
+            "name": "Brandon Davis"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 63,
+        "fields": {
+            "origination": "Los Angeles, CA",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-17",
+            "time": "19:30",
+            "taking_passengers": true,
+            "seats_available": 1,
+            "email": "ryan.davis@yahoo.com",
+            "vehicle_type": "Convertible",
+            "name": "Ryan Davis"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 64,
+        "fields": {
+            "origination": "Austin, TX",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "16:00",
+            "taking_passengers": true,
+            "seats_available": 3,
+            "email": "hannah.martinez@icloud.com",
+            "vehicle_type": "SUV",
+            "name": "Hannah Martinez"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 65,
+        "fields": {
+            "origination": "Austin, TX",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-19",
+            "time": "20:00",
+            "taking_passengers": true,
+            "seats_available": 1,
+            "email": "jessica.smith@outlook.com",
+            "vehicle_type": "Convertible",
+            "name": "Jessica Smith"
+        }
+    },
+    {
+        "model": "rides.person",
+        "pk": 66,
+        "fields": {
+            "origination": "Houston, TX",
+            "destination_city": "East Rutherford",
+            "destination_state": "NJ",
+            "date": "2026-07-18",
+            "time": "08:00",
+            "taking_passengers": true,
+            "seats_available": 2,
+            "email": "elizabeth.wilson@gmail.com",
+            "vehicle_type": "Electric",
+            "name": "Elizabeth Wilson"
+        }
+    }
+]

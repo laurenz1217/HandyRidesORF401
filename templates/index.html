@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="splash-container">
+    <div class="splash-content">
+        <div class="logo-container">
+            <img src="{% static 'newlogo.jpg' %}" alt="World Cup RideShare Logo" class="logo">
+        </div>
+        
+        <div class="header-content">
+            <h1 class="splash-title">World Cup Final 2026 RideShare</h1>
+            <p class="splash-subtitle">Connect with fellow soccer fans heading to the FIFA World Cup Final at MetLife Stadium in East Rutherford, NJ!</p>
+        </div>
+
+        <div class="event-details">
+            <div class="detail-item">
+                <i class="fas fa-calendar"></i>
+                <span>July 19, 2026</span>
+            </div>
+            <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>MetLife Stadium, East Rutherford, NJ</span>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon-circle">
+                    <i class="fas fa-car"></i>
+                </div>
+                <h3>Share the Journey</h3>
+                <p>Connect with other World Cup fans for an unforgettable road trip!</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="icon-circle">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <h3>Split Costs</h3>
+                <p>Share travel expenses and make the journey more affordable!</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="icon-circle">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3>Go Green</h3>
+                <p>Reduce your carbon footprint on the way to the biggest game in soccer!</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="icon-circle">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Build Community</h3>
+                <p>Meet fellow soccer enthusiasts and make new friends!</p>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <a href="{% url 'rides:rides' %}" class="cta-button primary">Find a Ride</a>
+            <a href="{% url 'rides:create' %}" class="cta-button secondary">Offer a Ride</a>
+        </div>
+    </div>
+</div>
+
+<style>
+.splash-container {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('{% static "metlife-stadium.jpg" %}') center/cover no-repeat fixed;
+    min-height: 100vh;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.splash-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo {
+    max-width: 200px;
+    margin-bottom: 2rem;
+}
+
+.header-content {
+    margin-bottom: 3rem;
+}
+
+.splash-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.splash-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.event-details {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0;
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.detail-item i {
+    color: #ffd700;
+    font-size: 1.5rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.feature-card {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.icon-circle i {
+    font-size: 2rem;
+    color: #ffd700;
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+    color: #ffd700;
+}
+
+.feature-card p {
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.cta-button {
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+    background: #ffd700;
+    color: #000;
+}
+
+.cta-button.secondary {
+    background: #28a745;
+    color: white;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .splash-title {
+        font-size: 2.5rem;
+    }
+    
+    .event-details {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+}
+</style>
+{% endblock %}

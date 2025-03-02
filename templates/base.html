@@ -1,0 +1,142 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandyRides</title>
+    <!-- Update Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <script src="{% static 'main.js' %}"></script>
+</head>
+<body>
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% block content %}
+    {% endblock %}
+    <style>
+    .messages {
+        position: fixed !important;
+        top: 20px !important;
+        right: 20px !important;
+        z-index: 1000 !important;
+        min-width: 300px !important;
+    }
+
+    .alert {
+        background: rgba(40, 167, 69, 0.9) !important;
+        color: white !important;
+        border-radius: 10px !important;
+        padding: 1rem !important;
+        margin-bottom: 1rem !important;
+        border: none !important;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+        animation: slideIn 0.5s ease-out !important;
+    }
+
+    .alert-success {
+        background: rgba(40, 167, 69, 0.9) !important;
+    }
+
+    .alert-error {
+        background: rgba(220, 53, 69, 0.9) !important;
+    }
+
+    .close {
+        color: white !important;
+        opacity: 0.8 !important;
+        background: none !important;
+        border: none !important;
+        font-size: 1.5rem !important;
+        padding: 0 !important;
+        margin-left: 1rem !important;
+        cursor: pointer !important;
+    }
+
+    .close:hover {
+        opacity: 1 !important;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%) !important;
+            opacity: 0 !important;
+        }
+        to {
+            transform: translateX(0) !important;
+            opacity: 1 !important;
+        }
+    }
+    </style>
+    <script>
+    // Auto-dismiss alerts after 3 seconds
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            var alerts = document.getElementsByClassName('alert');
+            for(var i = 0; i < alerts.length; i++) {
+                var alert = alerts[i];
+                alert.style.animation = 'slideOut 0.5s ease-in forwards';
+                setTimeout(function(alert) {
+                    if (alert && alert.parentNode) {
+                        alert.parentNode.removeChild(alert);
+                    }
+                }, 500, alert);
+            }
+        }, 3000);
+    });
+
+    // Add slideOut animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Handle form submission and messages
+    document.addEventListener('DOMContentLoaded', function() {
+        // Auto-dismiss messages after 3 seconds
+        setTimeout(function() {
+            const messages = document.querySelectorAll('.alert');
+            messages.forEach(function(message) {
+                message.style.display = 'none';
+            });
+        }, 3000);
+
+        // Clear form on successful submission
+        const form = document.getElementById('rideForm');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                if (this.checkValidity()) {
+                    // Store form data for potential error recovery
+                    sessionStorage.setItem('lastFormData', JSON.stringify(Object.fromEntries(new FormData(this))));
+                }
+            });
+        }
+    });
+    </script>
+</body>
+</html>

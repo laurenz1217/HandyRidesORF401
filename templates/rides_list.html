@@ -1,0 +1,315 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="search-ride-container">
+    <div class="search-ride-content">
+        <h1 class="page-title">Find World Cup Final Rides</h1>
+        
+        <div class="form-container">
+            <form method="POST" action="{% url 'rides:ride_search' %}">
+                {% csrf_token %}
+                
+                <div class="form-section">
+                    <div class="form-group">
+                        <label>Search by origin city:</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-city"></i>
+                            {{ form.origination }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Search by destination city:</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-flag-checkered"></i>
+                            {{ form.destination_city }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Search by destination state:</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-map"></i>
+                            {{ form.destination_state }}
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        {% if rides %}
+        <div class="results-container">
+            <h2 class="results-title">Available Rides</h2>
+            <div class="rides-grid">
+                {% for ride in rides %}
+                <div class="ride-card">
+                    <div class="ride-header">
+                        <i class="fas fa-car"></i>
+                        <span class="vehicle-type">{{ ride.vehicle_type }}</span>
+                    </div>
+                    <div class="ride-details">
+                        <p><i class="fas fa-user"></i> {{ ride.name }}</p>
+                        <p><i class="fas fa-map-marker-alt"></i> From: {{ ride.origination }}</p>
+                        <p><i class="fas fa-flag-checkered"></i> To: {{ ride.destination_city }}, {{ ride.destination_state }}</p>
+                        <p><i class="fas fa-calendar"></i> Date: {{ ride.date }}</p>
+                        <p><i class="fas fa-clock"></i> Time: {{ ride.time }}</p>
+                        <p><i class="fas fa-users"></i> Available Seats: {{ ride.seats_available }}</p>
+                    </div>
+                    <div class="ride-contact">
+                        <a href="mailto:{{ ride.email }}" class="contact-button">
+                            <i class="fas fa-envelope"></i> Contact Driver
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="navigation-buttons">
+            <a href="{% url 'rides:index' %}" class="nav-button home">
+                <i class="fas fa-home"></i> Return Home
+            </a>
+            <a href="{% url 'rides:create' %}" class="nav-button offer">
+                <i class="fas fa-car"></i> Offer a Ride
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+.search-ride-container {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+                url('{% static "metlife-stadium.jpg" %}') center/cover no-repeat fixed;
+    min-height: 100vh;
+    padding: 2rem;
+    color: white;
+}
+
+.search-ride-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.form-container {
+    background: rgba(40, 40, 40, 0.95);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4a90e2;
+    z-index: 1;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 1rem;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+.results-container {
+    margin-top: 3rem;
+}
+
+.results-title {
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.rides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.ride-card {
+    background: rgba(40, 40, 40, 0.95);
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.ride-card:hover {
+    transform: translateY(-5px);
+}
+
+.ride-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+.ride-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ride-details p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+}
+
+.ride-details i {
+    color: #4a90e2;
+    width: 20px;
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.nav-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-button.home {
+    background: #4a90e2;
+    color: white;
+}
+
+.nav-button.offer {
+    background: #28a745;
+    color: white;
+}
+
+.nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .search-ride-container {
+        padding: 1rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .rides-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .navigation-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+</style>
+{% endblock %} 
